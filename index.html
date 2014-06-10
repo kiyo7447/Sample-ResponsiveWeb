@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link data-require="bootstrap-css@*" data-semver="3.1.1" rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet"                                                    href="./css/bootstrap.min.css">
+    <script data-require="jquery@1.11.0" data-semver="1.11.0" src="js/jquery-1.11.1.min.js"></script>
+    <script data-require="bootstrap@*" data-semver="3.1.1" src="./js/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.2.16" data-semver="1.2.16" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+    <script data-require="angular-ui-bootstrap@*" data-semver="0.10.0" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+    <script>
+      var app = angular.module('sampleApp',['ui.bootstrap']);
+      app.controller('MainCtrl',
+        function($scope) {
+          $scope.title = 'Responsive Navbar with ui.bootstrap Sample';
+          $scope.isCollapsed = true;
+        }
+      );
+    </script>
+  </head>
+
+  <body ng-app='sampleApp' ng-controller="MainCtrl">
+
+
+
+
+<!-- header -->
+<header>
+<hgroup>
+
+    <h1 ng-cloak>{{title}}</h1>
+</hgroup>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+      
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+        
+        <div collapse="isCollapsed" class="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search" />
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+      
+    </nav>
+
+</header>
+<!-- /header -->
+    
+
+<!-- contents -->
+<div id="contents">
+
+<!-- event -->
+<div id="event">
+<h2>イベント情報</h2>
+<h3>イベントタイトル01テキスト</h3>
+<p><img src="images/image_01.gif" />テキストテキストテキストテキストテキストテキスト </p>
+<h3>イベントタイトル02テキスト</h3>
+<p><img src="images/image_02.gif" />テキストテキストテキストテキストテキストテキスト </p>
+</div>
+<!-- /event -->
+
+<!-- news -->
+<div id="news">
+<h2>更新情報</h2>
+<dl>
+  <dt><span>[2012年01月01日] </span>　お知らせタイトル01テキスト</dt>
+  <dd> テキストテキストテキストテキストテキストテキストテキスト </dd>
+  <dt><span>[2012年01月01日] </span>　お知らせタイトル02テキスト</dt>
+  <dd> テキストテキストテキストテキストテキストテキストテキスト </dd>
+  <dt><span>[2012年01月01日]</span>　お知らせタイトル03テキスト</dt>
+  <dd> テキストテキストテキストテキストテキストテキストテキスト </dd>
+</dl>
+</div>
+<!-- /news -->
+
+</div>
+<!-- /contents -->
+
+    
+    <!-- footer -->
+<footer>
+<address>サイトへのお問い合わせ：<a href="mailto:info@example.com">info@example.com</a></address>
+<p class="copyright"><small>COPYRIGHT &copy; HTML5でサイトを作ろう AllRIGHTS RESERVED.</small></p>
+</footer>
+<!-- /footer -->
+
+  </body>
+</html>
